@@ -1,8 +1,8 @@
 #include <stdio.h>
-# Using puts to print a string
+/* Using puts to print a string */
 
 int main ()
 {
-	puts("Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return 0;
 }
