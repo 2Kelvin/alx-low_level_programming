@@ -1,1 +1,2 @@
-0. Preprocessor: saves the output to another file
+0. Preprocessor: stops at preprocessing then saves the output to another file
+1. Compiler: compiles c file but does not link
