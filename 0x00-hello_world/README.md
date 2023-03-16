@@ -2,3 +2,4 @@
 1. Compiler: compiles c file but does not link
 2. Assembler: generates assembly code
 3. Name: creates an executable file "cisfun"
+4. Hello, puts: Prints a string using puts()
