@@ -4,3 +4,4 @@ Readme on C if else and while loops:
 1. prints the last digit of a variable number n
 2. prints every letter of the alphabet using putchar and for loop
 3. prints the alpahabet in small letters
+4. ommit letter q and e
