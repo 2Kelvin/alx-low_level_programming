@@ -4,3 +4,4 @@
 3. Name: creates an executable file "cisfun"
 4. Hello, puts: Prints a string using puts()
 5. Hello, printf: Prints a string using printf()
+6. Size: prints the size of C data types
