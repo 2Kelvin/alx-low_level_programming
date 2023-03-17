@@ -8,3 +8,4 @@ Readme on C if else and while loops:
 5. print numbers 0-9
 
 7. print the alpahbet in reverse order
+8. prints base 16 numbers
