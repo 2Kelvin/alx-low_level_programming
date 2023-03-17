@@ -6,6 +6,6 @@ Readme on C if else and while loops:
 3. prints the alpahabet in small letters
 4. ommit letter q and e
 5. print numbers 0-9
-
+6. print base 10 numbers
 7. print the alpahbet in reverse order
 8. prints base 16 numbers
