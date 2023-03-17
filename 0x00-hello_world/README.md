@@ -3,3 +3,4 @@
 2. Assembler: generates assembly code
 3. Name: creates an executable file "cisfun"
 4. Hello, puts: Prints a string using puts()
+5. Hello, printf: Prints a string using printf()
