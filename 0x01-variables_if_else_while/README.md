@@ -5,3 +5,4 @@ Readme on C if else and while loops:
 2. prints every letter of the alphabet using putchar and for loop
 3. prints the alpahabet in small letters
 4. ommit letter q and e
+5. print numbers 0-9
