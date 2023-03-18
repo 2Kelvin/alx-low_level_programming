@@ -9,3 +9,4 @@ Readme on C if else and while loops:
 6. print base 10 numbers
 7. print the alpahbet in reverse order
 8. prints base 16 numbers
+9. prints all posible combinations of single digit numbers
