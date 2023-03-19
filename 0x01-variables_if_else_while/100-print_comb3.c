@@ -15,11 +15,10 @@ int main(void)
 			{
 				putchar(i);
 				putchar(k);
-				if (i != '8' && k != '9')
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				if (i == '8' && k == '9')
+					continue;
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
