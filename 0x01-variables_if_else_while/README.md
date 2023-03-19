@@ -11,3 +11,4 @@ Readme on C if else and while loops:
 8. prints base 16 numbers
 9. prints all posible combinations of single digit numbers
 100. print double digits combo
+101. prints triple number combo
