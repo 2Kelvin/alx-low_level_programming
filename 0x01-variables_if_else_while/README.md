@@ -12,3 +12,4 @@ Readme on C if else and while loops:
 9. prints all posible combinations of single digit numbers
 100. print double digits combo
 101. prints triple number combo
+102. prints the possible double digit combinations
