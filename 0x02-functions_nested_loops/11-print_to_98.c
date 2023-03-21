@@ -1,15 +1,17 @@
 #include "main.h"
+#include <stdio>
 /** 
   * print_to_98 - print numbers to 98
+  * @n: passed number argument
   * Return: void
   */
 void print_to_98(int n)
 {
-	if (n < 99)
+	if (n < 98)
 	{
-		for (n = n; n <= 98; n++)
+		for (; n <= 98; n++)
 		{
-			_putchar(n);
+			printf("%d", n);
 			if (n == 98)
 				break;
 			_putchar(',');
@@ -18,14 +20,17 @@ void print_to_98(int n)
 	}
 	else if (n > 98)
 	{
-		for (n = n; n >= 98; n--)
+		for (; n >= 98; n--)
 		{
-			_putchar(n);
+			printf("%d", n);
 			if (n == 98)
 				break;
 			_putchar(',');
 			_putchar(' ');
 		}
 	}
+	else
+		printf("%d", n);
+	_putchar('\n');
 }
 
