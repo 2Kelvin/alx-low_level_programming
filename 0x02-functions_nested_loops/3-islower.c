@@ -7,10 +7,8 @@
   */
 int _islower(int c)
 {
-	int l = (c + '0');
-
-	if (l >= 97 && l <= 122)
-		return (1);
-	else
+	if (islower(c) > 0)
 		return (0);
+	else if (islower(c) == 0)
+		return (1);
 }
