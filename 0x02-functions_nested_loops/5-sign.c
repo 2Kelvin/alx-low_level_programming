@@ -1,6 +1,7 @@
 #include "main.h"
 /**
-  * main - prints a sign
+  * print_sign - prints a sign
+  * @n: argument
   * Return: 0
   */
 int print_sign(int n)
