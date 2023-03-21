@@ -1,20 +1,16 @@
 #include "main.h"
 #include <ctype.h>
 /**
-  * main - check for lowercase characters
+  * _islower - check for lowercase characters
+  * @c: character argument
   * Return: 0
   */
 int _islower(int c)
 {
-	asciiLetter = (c + '0');
+	int asciiLetter = (c + '0');
 
 	if ((isLower(asciiLetter) > 0))
 		return (1);
 	else
 		return (0);
-
-int main(void)
-{
-	_isLower();
-	return (0);
 }
