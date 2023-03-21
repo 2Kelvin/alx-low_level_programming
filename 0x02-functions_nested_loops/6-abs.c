@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * main - priint the absolute value
+  * _abs - priint the absolute value
   * @x: int argument
   * Return: x
   */
