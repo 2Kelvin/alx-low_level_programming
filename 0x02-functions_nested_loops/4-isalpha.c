@@ -6,9 +6,11 @@
   */
 int _isalpha(int c)
 {
-	int asciiLetter = (c + '0');
+	int i;
 
-	if ((asciiLetter >= 65 && asciiLetter <= 90) || (asciiLetter >= 97 && asciiLetter <= 122))
+	if (i >= 'a' && i <= 'z')
+		return (1);
+	else if (i >= 'A' && i <= 'Z')
 		return (1);
 	else
 		return (0);
