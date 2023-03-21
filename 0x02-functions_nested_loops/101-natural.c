@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
   * sumMultiple35 - prints the sum of multiples of 3 and 5
