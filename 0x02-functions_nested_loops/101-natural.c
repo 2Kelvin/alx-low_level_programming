@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
-  * sumMultiple35 - prints the sum of multiples of 3 and 5
-  * Return: void
+  * main - prints the sum of multiples of 3 and 5
+  * Return: 0
   */
-int sumMultiple35(void)
+int main(void)
 {
 	int n, sum;
 
@@ -13,5 +13,5 @@ int sumMultiple35(void)
 			sum += n;
 		printf("%d\n", sum);
 	}
-	return (sum);
+	return (0);
 }
