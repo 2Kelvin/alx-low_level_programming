@@ -1,26 +1,33 @@
 #include "main.h"
 /**
-  * main - print 23:59
+  * jack_bauer - print 23:59
   * Return: void
   */
 void jack_bauer(void)
 {
-	int h;
-	int m;
+	int a, b, c, d;
 
-	for (h = '0'; h <= '23'; h++)
+	for (a = '0'; a <= '2'; a++)
 	{
-		for (m = '0'; m <= '60'; m++)
+		for (b = '0'; b <= '9'; b++)
 		{
-			if (h = '24' && m == '59')
-				break;
-			else 
+			for (c = '0'; c < '6'; c++)
 			{
-				_putchar(h);
-				_putchar(':');
-				_putchar(m);
+				for (d = '0'; d <= '9'; d++)
+				{
+					if ((a == '2') && (b >= '4'))
+						continue;
+					else
+					{
+						_putchar(a);
+						_putchar(b);
+						_putchar(':');
+						_putchar(c);
+						_putchar(d);
+						_putchar('\n');
+					}
+				}
 			}
 		}
 	}
-	_putchar('\n');
 }
