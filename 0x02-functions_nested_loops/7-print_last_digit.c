@@ -1,6 +1,7 @@
 #include "main.h"
 /**
-  * main - print last digit of anumber
+  * print_last_digit - print last digit of a number
+  * @x: is the number argument passed
   * Return: lastDigit
   */
 int print_last_digit(int x)
@@ -8,5 +9,5 @@ int print_last_digit(int x)
 	lastDigit = x % 10;
 	_putchar(lastDigit);
 	_putchar('\n');
-	return lastDigit;
+	return (lastDigit);
 }
