@@ -3,13 +3,13 @@
 /**
   * _islower - check for lowercase characters
   * @c: character argument
-  * Return: 0
+  * Return: 1 if lowercase, 0 if not
   */
 int _islower(int c)
 {
-	int asciiLetter = (c + '0');
+	int l = (c + '0');
 
-	if ((isLower(asciiLetter) > 0))
+	if (l >= 97 && l <= 122)
 		return (1);
 	else
 		return (0);
