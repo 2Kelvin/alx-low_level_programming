@@ -14,6 +14,6 @@ int main(void)
 		if (n % 3 || n % 5)
 			sum += n;
 	}
-	printf("%d\n", sum);
+	printf("%d\n", sum / 2);
 	return (0);
 }
