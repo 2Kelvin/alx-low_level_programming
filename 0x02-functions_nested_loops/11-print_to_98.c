@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-/** 
+/**
   * print_to_98 - print numbers to 98
   * @n: passed number argument
   * Return: void
@@ -30,6 +30,9 @@ void print_to_98(int n)
 		}
 	}
 	else
+	{
 		printf("%d", n);
+		printf("\n");
+	}
 }
 
