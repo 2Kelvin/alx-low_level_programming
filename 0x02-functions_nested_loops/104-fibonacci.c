@@ -12,17 +12,16 @@ int main(void)
 
 	printf("%i, ", f);
 	printf("%i, ", s);
-	while (count <=98)
+	while (count <= 98)
 	{
 		if (count == 98)
 			printf("%i\n", n);
 		else
 			printf("%i ", n);
-		f =s;
+		f = s;
 		s = n;
 		n = f + s;
 		count++;
 	}
 	return (0);
-}
-	
+}	
