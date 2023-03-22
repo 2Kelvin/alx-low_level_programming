@@ -14,12 +14,12 @@ int main(void)
 	printf("%lu, ", secondNo);
 	while (numberCount <= 50)
 	{
-		if (numbercount == 50)
+		if (numberCount == 50)
 			printf("%lu\n", nextNo);
 		else 
 			printf("%lu, ", nextNo);
 		firstNo = secondNo;
-		secondNo = nextNumber;
+		secondNo = nextNo;
 		nextNo = firstNo + secondNo;
 		numberCount++;
 	}
