@@ -16,7 +16,7 @@ int main(void)
 	{
 		if (numberCount == 50)
 			printf("%lu\n", nextNo);
-		else 
+		else
 			printf("%lu, ", nextNo);
 		firstNo = secondNo;
 		secondNo = nextNo;
