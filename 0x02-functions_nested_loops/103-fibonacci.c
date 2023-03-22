@@ -19,6 +19,6 @@ int main(void)
 		s = f + s;
 		f = s - f;
 	}
-	printf("%ld\n",evenSum);
+	printf("%ld\n", evenSum);
 	return (0);
 }
