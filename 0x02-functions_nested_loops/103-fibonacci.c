@@ -1,27 +1,24 @@
 #include <stdio.h>
+
 /**
   * main - print sum of Fibonacci even numbers
   * Return: 0
   */
+
 int main(void)
 {
-	long int numCount = 3;
-	long int firstNum = 1;
-	long int secondNum = 2;
-	long int nextNum = firstNum + secondNum;
+	long int f = 1;
+	long int s = 2;
+	long int i;
 	long int evenSum = 0;
 
-	printf("%lu, ", firstNum);
-	printf("%lu, ", secondNum);
-	while (numCount <= 4000000)
+	for (i = 0; f < 4000000; i++)
 	{
-		firstNum = secondNum;
-		secondNum = nextNum;
-		nextNum = firstNum + secondNum;
-		if ((firstNum % 2) == 0)
-			evenSum += firstNum;
-		numCount++;
+		if (!(f % 2))
+			evenSum += f;
+		s = f + s;
+		f = s - f;
 	}
-	printf("%lu\n", evenSum);
+	printf("%ld\n",sum);
 	return (0);
 }
