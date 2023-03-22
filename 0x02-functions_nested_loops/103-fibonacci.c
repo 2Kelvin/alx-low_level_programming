@@ -15,11 +15,11 @@ int main(void)
 	printf("%lu, ", secondNum);
 	while (numCount <= 4000000)
 	{
-		if (secondNum % 2)
-			evenSum += secondNum;
 		firstNum = secondNum;
 		secondNum = nextNum;
 		nextNum = firstNum + secondNum;
+		if ((firstNum % 2) == 0)
+			evenSum += firstNum;
 		numCount++;
 	}
 	printf("%lu\n", evenSum);
