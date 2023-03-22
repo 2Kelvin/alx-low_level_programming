@@ -16,12 +16,12 @@
          while (numberCount <= 4000000)
          {
                  if (firstNo % 2 == 0)
-			 sum += firstNo;
+			 evenSum += firstNo;
                  firstNo = secondNo;
                  secondNo = nextNo;
                  nextNo = firstNo + secondNo;
                  numberCount++;
          }
-	 printf("%lu\n", sum);
+	 printf("%lu\n", evenSum);
          return (0);
  }
