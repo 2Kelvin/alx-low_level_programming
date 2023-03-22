@@ -18,8 +18,8 @@ int main(void)
 		firstNum = secondNum;
 		secondNum = nextNum;
 		nextNum = firstNum + secondNum;
-		if ((nextNum % 2) == 0)
-			evenSum += nextNum;
+		if ((firstNum % 2) == 0)
+			evenSum += firstNum;
 		numCount++;
 	}
 	printf("%lu\n", evenSum);
