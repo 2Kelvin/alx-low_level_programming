@@ -15,7 +15,7 @@ int main(void)
 	printf("%lu, ", secondNum);
 	while (numCount <= 4000000)
 	{
-		if (firstNum % 2 == 0)
+		if (firstNum % 2 )
 			evenSum += firstNum;
 		firstNum = secondNum;
 		secondNum = nextNum;
