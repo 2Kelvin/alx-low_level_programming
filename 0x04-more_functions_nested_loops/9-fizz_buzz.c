@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
-* fizzBuzz - rename multiples of 3 and 5
+* fizz_buzz - rename multiples of 3 and 5
 * Return: void
 */
 
-void fizzBuzz(void)
+void fizz_buzz(void)
 {
 	int n;
 
