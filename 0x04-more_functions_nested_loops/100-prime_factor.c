@@ -1,28 +1,28 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints the largest prime factor 
- * Return: 0 for success
-**/
+ * main - print largest prime number
+ * Return: 0
+ */
 
 int main(void)
 {
-	long int i, num;
+	unsigned long int num = 612852475143;
+	unsigned long int primeNum;
 
-	num = 612852475143;
-
-	for (i = 1; i <= num; i++)
+	primeNum = 3;
+	while (primeNum < num / 2)
 	{
-		if (num % i == 0)
+		if ((num % primeNum) == 0)
 		{
-			if (num == i)
-			{
-				printf("%ld\n", i);
-				break;
-			}
-			num /= i;
-			i = 1;
+			if((primeNum % 3) == 2)
+				printf(",%lu ", primeNum);
 		}
+
+		primeNum += 2;
 	}
+
+	_putchar('\n');
 	return (0);
 }
