@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	long int i, num, f;
+	long int i, num;
 
 	num = 612852475143;
 
@@ -20,8 +20,7 @@ int main(void)
 				printf("%ld\n", i);
 				break;
 			}
-			f = num / i;
-			num = f;
+			num /= i;
 			i = 1;
 		}
 	}
