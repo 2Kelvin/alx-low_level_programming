@@ -30,5 +30,7 @@ int main(void)
 	{
 		maxPrime = num;
 	}
-	return (maxPrime);
+	printf("%ld", maxPrime);
+
+	return (0);
 }
