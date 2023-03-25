@@ -8,7 +8,7 @@
 int main(void)
 {
 	long int i;
-	long long num;
+	long long int num;
 
 	num = 612852475143;
 
