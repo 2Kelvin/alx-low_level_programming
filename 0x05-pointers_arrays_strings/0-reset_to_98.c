@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
   * reset_to_98 - update variable through a pointer permanently
