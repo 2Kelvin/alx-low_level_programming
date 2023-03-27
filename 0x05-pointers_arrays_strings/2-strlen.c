@@ -6,6 +6,12 @@
 
 int _strlen(char *s)
 {
-	size_t length = strlen(*s);
+	int i;
+	int length = 0;
+
+	for (i = 0; i < sizeof(*s); i++)
+	{
+		length++;
+	}
 	return (length);
 }
