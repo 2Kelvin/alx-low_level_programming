@@ -2,6 +2,7 @@
 
 /**
   * reset_to_98 - update variable through a pointer permanently
+  * @n: pointer parameter
   * Return: void
   */
 
