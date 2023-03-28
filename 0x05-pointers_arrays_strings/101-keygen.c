@@ -10,11 +10,11 @@
 
 void generatePassword(int passwLength)
 {
-	char characters[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/\|";
+	char characters[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/\\|";
 	int i;
 
 	srand(time(NULL));
-	for (1 = 0; i < passwLength; i++)
+	for (i = 0; i < passwLength; i++)
 		printf("%c", characters[rand() % (sizeof characters - 1)]);
 	printf("\n");
 }
