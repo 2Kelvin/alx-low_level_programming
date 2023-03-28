@@ -1,63 +1,43 @@
+/*
+ *
+ *  gen-passwd.c: generate a random password
+ *
+ */
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
 #include <time.h>
 
-/**
-  * passwordGenerator - generates random passwords based on time
-  * @n - passwoed characters parameter
-  * Return: void
-  */
+#define MIN_CHAR 8
+#define MAX_CHAR 1023
+#define BUF_SIZE 1024
+#define PRIME_MOD 937
 
-void passwordGenerator(8)
+int main (int argc, char **argv)
 {
-	int counter;
-	int makeRandom = 0;
-	char numbers[] = "0123456789";
-	char smallLetters[] = "abcdefghijklmnopqrstuvwxyz";
-	char capitalLetters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[] = "!@#$^&*?";
-	char password[8];
+    int N;
+    char password [BUF_SIZE];
 
-	srand((unsigned int)(time(NULL)));
-	makeRandom = rand() % 4;
-
-	for (counter = 0; counter < n; counter++)
+    while (1)
+    {
+        while (1)
 	{
-		if (makeRandom == 1)
-		{
-			password[counter] = numbers[rand() % 10];
-			makeRandom = rand() % 4;
-			printf("%c", password[counter]);
-		}
-		else if (makeRandom == 2)
-		{
-			password[counter] = symbols[rand() % 8];
-			makeRandom = rand() % 4;
-			printf("%c", password[counter]);
-		}
-		else if (makeRandom == 3)
-		{
-			password[counter] = capitalLetters[rand() % 26];
-			makeRandom = rand() % 4;
-			printf("%c", password[counter]);
-		}
-		else
-		{
-			password[counter] = smallLetters[rand() % 26];
-			makeRandom = rand() % 4;
-			printf("%c", password[counter]);
-		}
-	}
-}
+            printf ("Enter number of digits: ");
+            scanf ("%d", &N);
+            if (!N) exit (EXIT_SUCCESS);
+            if (N >= MIN_CHAR && N <= MAX_CHAR)
+                break;
+            printf ("Password should be between %d - %d characters\n", MIN_CHAR, MAX_CHAR); 
+        }
+    
+        time_t now = time (NULL);
 
-/**
-  * main - calls passwordGenerator to create a random password
-  * Return: 0 for success
-  */
-int main(void)
-{
-	passwordGenerator(8);
+        srand ((unsigned int) (now % PRIME_MOD));
 
-	return (0);
+        for (int i = 0; i < N; i++) 
+            password [i] = 33 + rand () % 94;
+    
+        password [N] = '\0';
+
+        printf ("password = %s\n", password);
+    }
 }
