@@ -13,15 +13,13 @@ void passwordGenerator(int n)
 {
 	int counter;
 	int makeRandom = 0;
-
-	srand((unsigned int)(time(NULL)));
-
 	char numbers[] = "0123456789";
 	char smallLetters[] = "abcdefghijklmnopqrstuvwxyz";
 	char capitalLetters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char symbols[] = "!@#$^&*?";
 	char password[n];
 
+	srand((unsigned int)(time(NULL)));
 	makeRandom = rand() % 4;
 
 	for (counter = 0; counter < n; counter++)
@@ -48,7 +46,7 @@ void passwordGenerator(int n)
 		{
 			password[counter] = smallLetters[rand() % 26];
 			makeRandom = rand() % 4;
-			pirntf("%c", password[counter]);
+			printf("%c", password[counter]);
 		}
 	}
 }
