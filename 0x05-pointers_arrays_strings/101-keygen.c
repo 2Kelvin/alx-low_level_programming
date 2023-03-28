@@ -9,7 +9,7 @@
   * Return: void
   */
 
-void passwordGenerator(int n)
+void passwordGenerator(8)
 {
 	int counter;
 	int makeRandom = 0;
@@ -17,7 +17,7 @@ void passwordGenerator(int n)
 	char smallLetters[] = "abcdefghijklmnopqrstuvwxyz";
 	char capitalLetters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char symbols[] = "!@#$^&*?";
-	char password[n];
+	char password[8];
 
 	srand((unsigned int)(time(NULL)));
 	makeRandom = rand() % 4;
