@@ -17,7 +17,8 @@ void puts_half(char *str)
 		index++;
 	}
 
-	int n = (stringLength - 1) / 2;
+	int lengthMinusOne = stringLength - 1;
+	int n = lengthMinusOne / 2;
 
 	if (stringLength % 2 != 0)
 	{
