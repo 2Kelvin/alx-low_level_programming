@@ -1,23 +1,22 @@
 #include "main.h"
 
 /**
-  * _strcat - concatenates two strings
+  * _strncat - concatenates two strings limited by n
   * @dest: string pointer 1
   * @src: string pointer 2
+  * @n: limits characters added
   * Return: @dest
   */
-char *_strcat(char *dest, char *src)
+
+char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0;
 	int l = 0;
 	int destLength = 0;
 
 	while (dest[i] != '\0')
-	{
 		destLength++;
-		i++;
-	}
-	while (src[l] != '\0')
+	while ((src[l] != '\0') && (l < n))
 	{
 		dest[destLength++] = src[l];
 		l++;
