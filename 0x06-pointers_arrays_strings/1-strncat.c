@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
   * _strncat - concatenates two strings limited by n
   * @dest: string pointer 1
