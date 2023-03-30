@@ -7,3 +7,7 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *cap_string(char *str);
 char *leet(char *s);
+char *rot13(char *);
+void print_number(int);
+char infinite_add(char *, char *.  char *, int);
+void print_buffer(char *, int);
