@@ -1,33 +1,22 @@
 #include "main.h"
 
 /**
- * print_number - print any integer
- * @n: integer 
+ * print_number - prints an integer
+ * @n: input integer parameter
  * Return: void
- */
+**/
 
 void print_number(int n)
 {
-	int count, y, k;
+	unsigned int l = n;
 
-	y = 1000000000;
-
-	if (n == 0)
-		_putchar('0');
-	else if (n > 0)
-		n *= -1;
-	else
-		_putchar('-');
-	for (count = 0; count < 10; count++, y /= 10)
+	if (n < 0)
 	{
-		if (n / y == 0)
-			continue;
-		else
-		{
-			k = (-(n / y) % 10);
-			if (k < 0)
-				k *= -1;
-			_putchar(k + '0');
-		}
+		_putchar('-');
+		l = -l;
 	}
-}
+	if (l / 10)
+	{
+		print_number(l / 10);
+	}
+	_putchar(l % 10 + '0');
