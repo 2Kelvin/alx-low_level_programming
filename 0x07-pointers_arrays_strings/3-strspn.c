@@ -7,31 +7,27 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int a = 0;
-	int b = 0;
-	char *newS;
-	char *newAccept;
-	unsigned int prefixLen;
+	int a;
+	int b;
+	int numBytes = 0;
+	int bfl;
 
-	newS = s;
-	newAccept = accept;
-
-	while (newS != '\0')
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		while (newAccept != '\0')
+		bfl = 0;
+
+		for (b = 0; accept[b] != '\0'; b++)
 		{
-			if (newAccept[b] == newS[a])
+			if (s[a] == accept[b])
 			{
-				prefixLen++;
-				break;
+				numBytes++;
+				bfl = 1;
 			}
-			b++;
 		}
 
-		if (s[a] != accept[b])
-			break;
-		a++;
+		if (bfl == 0)
+			return (numBytes);
 	}
 
-	return (prefixLen);
+	return (0);
 }
