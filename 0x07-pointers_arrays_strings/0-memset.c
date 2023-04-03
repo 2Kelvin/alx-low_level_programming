@@ -4,15 +4,16 @@
   * _memset - fill memory with character b
   * @s: string parameter
   * @b: character to fill with
-  * @int: positive number to print character b
-  */
+  * @int: positive number to print character
+  * Return: s
+ */
 
 char *_memset(char *s, char b,, unsigned int n)
 {
-	int i;
+	unsigned int index;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	for (index = 0; index < n; index++)
+		s[index] = b;
 
 	return (s);
 }
