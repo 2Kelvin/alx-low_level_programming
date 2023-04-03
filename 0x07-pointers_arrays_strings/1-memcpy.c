@@ -3,14 +3,15 @@
   * @dest: destination string parameter
   * @src: source parameter string
   * @n: data count parameter
+  * Return: dest
   */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned counter;
+	unsigned int counter;
 
 	for (counter = 0; counter < n; counter++)
 		dest[counter] = src[counter];
 
-	return (0);
+	return (dest);
 }
