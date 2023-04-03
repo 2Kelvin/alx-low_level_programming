@@ -1,11 +1,8 @@
-#include "main.h"
-
 /**
   * _memset - fill memory with character b
   * @s: string parameter
   * @b: character to fill with
   * @n: number of times to fill b
-  * @int: positive number to print character
   * Return: s
  */
 
