@@ -4,11 +4,12 @@
   * _memset - fill memory with character b
   * @s: string parameter
   * @b: character to fill with
+  * @n: number of times to fill b
   * @int: positive number to print character
   * Return: s
  */
 
-char *_memset(char *s, char b,, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int index;
 
