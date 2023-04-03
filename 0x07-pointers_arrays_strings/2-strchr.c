@@ -1,5 +1,5 @@
 /**
-  * strchr - finds char c in string s
+  * _strchr - finds char c in string s
   * @s: string parameter
   * @c: character to find parameter
   * Return: first char occurence or NULL
