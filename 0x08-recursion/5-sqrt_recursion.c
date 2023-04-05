@@ -7,9 +7,9 @@
 
 int recursiveSqrt(int num, int g)
 {
-	if ((g * g) > n)
+	if ((g * g) > num)
 		return (-1);
-	else if ((g * g) == n)
+	else if ((g * g) == num)
 		return (g);
 	else
 		return (recursiveSqrt(num, (g + 1)));
