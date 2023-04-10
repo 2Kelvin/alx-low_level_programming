@@ -2,7 +2,9 @@
 
 /**
   * main - print the name of the program
-  * Retutn: 0 (Success)
+  * @argc: number of main's arguments
+  * @argv: main's arguments
+  * Return: 0 (Success)
   */
 
 int main(int argc, char *argv[])
