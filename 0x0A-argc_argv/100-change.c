@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
 	quarters = cents / 25;
 	rem = cents % 25;
 	dimes = rem / 10;
-	rem %= 10;
+	rem = rem % 10;
 	nickles = rem / 5;
-	rem %= 5;
+	rem = rem % 5;
 	twos = rem / 2;
-	rem %= 2;
+	rem = rem % 2;
 	pennies = rem / 1;
 
 	coins = dimes + quarters + nickles + twos + pennies;
