@@ -19,15 +19,16 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	else
+		/* converting the cents at argv[1] from string to int */
+		cents = atoi(argv[1]);
+
 	/* checking if negative value has been passed in */
-	else if (cents <= 0)
+	if (cents <= 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	else
-		/* converting the cents at argv[1] from string to int */
-		cents = atoi(argv[1]);
 
 	quarters = cents / 25;
 	rem = cents % 25;
