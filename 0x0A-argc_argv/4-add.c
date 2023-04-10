@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int i, sum = 0;
 
 	/* checking if there are any arguments passed to program */
-	if (argc == 1)
+	if (argc <= 1)
 		/* print 0 if no args have been passed */
 		printf("0\n");
 	else
