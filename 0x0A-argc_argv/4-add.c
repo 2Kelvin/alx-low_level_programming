@@ -11,43 +11,33 @@
 
 int main(int argc, char *argv[])
 {
-	/* initializing variables loop index & sum */
-	int i, sum = 0;
+	int i;
+	int sum = 0;
+	int a = 1;
 
-	/* checking if there are any arguments passed to program */
+	/* check if any arguments passed */
 	if (argc == 1)
 	{
-		/* print 0 if no args have been passed */
 		printf("0\n");
 		return (0);
 	}
-	else
+	while (a < argc)
 	{
-		/* looping thro arguments */
-		/* starting from 1 to skip the program argument at argv[0] */
-		for (i = 1; i < argc; i++)
+		for (i = 0; argv[a][i] != '\0'; i++)
 		{
-			/* checking if we are at the end of the string */
-			if (*argv[i] != '\0')
+			/* checking if it's a digit or not */
+			if (!(isdigit(argv[a][i])))
 			{
-				/* checking if the argument is a number */
-				if (isdigit(*argv[i]) != 0)
-					/* if it's a number, convert from string to int */
-					/* then do the sum */
-					sum = sum + atoi(argv[i]);
-				else
-				{
-					/* if it's not a number, print error */
-					/* and return (1) */
-					printf("Error\n");
-					return (1);
-				}
+				printf("Error\n");
+				return (1);
 			}
 		}
-
-		/* print the sum if code is successful */
-		printf("%d\n", sum);
+		/*  calculating the sum */
+		sum += atoi(argv[a]);
+		a++;
 	}
+	/* printing the sum */
+	printf("%d\n", sum);
 
 	return (0);
 }
