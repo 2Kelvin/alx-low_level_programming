@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 				{
 					/* if it's a number, convert from string to int */
 					/* then do the sum */
-					sum += atoi(argv[i]);
+					sum = sum + atoi(argv[i]);
 				}
 				else
 				{
