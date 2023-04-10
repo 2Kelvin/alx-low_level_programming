@@ -16,8 +16,11 @@ int main(int argc, char *argv[])
 
 	/* checking if there are any arguments passed to program */
 	if (argc == 1)
+	{
 		/* print 0 if no args have been passed */
 		printf("0\n");
+		return (0);
+	}
 	else
 	{
 		/* looping thro arguments */
@@ -29,11 +32,9 @@ int main(int argc, char *argv[])
 			{
 				/* checking if the argument is a number */
 				if (isdigit(*argv[i]) != 0)
-				{
 					/* if it's a number, convert from string to int */
 					/* then do the sum */
 					sum = sum + atoi(argv[i]);
-				}
 				else
 				{
 					/* if it's not a number, print error */
