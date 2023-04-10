@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
 
 	/* checking if the program has received 2 arguments */
 	/* argc should be 3 for a successful program */
-	/* 1 arg for the program, 2 for the numbers */
-	if (args != 3)
+	/* 1st arg is for the program, the other 2 for the numbers */
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
