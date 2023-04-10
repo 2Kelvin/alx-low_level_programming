@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	/* print the 1st argv argument */
 	/* it should automatically be the program's name */
-	printf("./%s", argv[0]);
+	printf("%s", argv[0]);
 
 	return (0);
 }
