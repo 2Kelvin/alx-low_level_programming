@@ -19,13 +19,19 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 
 	/* allocating memory space for pointerStr using malloc() */
-	pointerStr = malloc((size + 1) * sizeof(char));
+	pointerStr = malloc(size * sizeof(char));
+
+	if (pointerStr == NULL)
+		return (0);
+
 	/* filling pointerStr with char c */
 	while (i < size)
 	{
 		pointerStr[i] = c;
 		i++;
 	}
+	/* adding a null pointer at the end of the string */
+	pointerStr[i] = '\0';
 
 	/* returning the pointer string */
 	return (pointerStr);
