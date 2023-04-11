@@ -20,14 +20,11 @@ char *str_concat(char *s1, char *s2)
 	while (s2[s2Len])
 		s2Len++;
 	totalLen = s1Len + s2Len;
-
-	/* allocating memory for concStr */
-	/* +1 is for '\0' */
+	/* allocating memory for concStr, +1 for '\0' */
 	concStr = malloc(sizeof(char) * (totalLen + 1));
 	/* checking if memory was allocated successfully */
 	if (concStr == NULL)
 		return (NULL);
-
 	/* copying s1 to concStr */
 	if (s1)
 	{
@@ -37,9 +34,6 @@ char *str_concat(char *s1, char *s2)
 			i++;
 		}
 	}
-	else
-
-		s1 = "";
 	/* copying s2 to concStr */
 	if (s2)
 	{
@@ -50,10 +44,6 @@ char *str_concat(char *s1, char *s2)
 			j++;
 		}
 	}
-	else
-		s2 = "";
-	/* adding null terminator at the end of concStr */
 	concStr[totalLen] = '\0';
-
 	return (concStr);
 }
