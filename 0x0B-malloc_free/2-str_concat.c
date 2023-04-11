@@ -29,18 +29,29 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	/* copying s1 to concStr */
-	while (i < s1Len)
+	if (s1)
 	{
-		concStr[i] = s1[i];
-		i++;
+		while (i < s1Len)
+		{
+			concStr[i] = s1[i];
+			i++;
+		}
 	}
+	else
+
+		s1 = "";
 	/* copying s2 to concStr */
-	while (i < totalLen)
+	if (s2)
 	{
-		concStr[i] = s2[j];
-		i++;
-		j++;
+		while (i < totalLen)
+		{
+			concStr[i] = s2[j];
+			i++;
+			j++;
+		}
 	}
+	else
+		s2 = "";
 	/* adding null terminator at the end of concStr */
 	concStr[totalLen] = '\0';
 
