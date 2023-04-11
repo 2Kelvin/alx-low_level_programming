@@ -21,7 +21,7 @@ char *_strdup(char *str)
 
 	/* allocating memory space for duplicate string */
 	/* adding an extra space for the null terminator at the end of string */
-	dupStr = malloc(sizeof(char) * (strLength + 1);
+	dupStr = malloc(sizeof(char) * (strLength + 1));
 
 	/* checking if memory allocation to dupStr was successful */
 	if (dupStr == NULL)
