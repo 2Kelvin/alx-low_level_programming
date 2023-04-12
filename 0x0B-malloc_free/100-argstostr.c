@@ -10,25 +10,37 @@
 char *argstostr(int ac, char **av)
 {
 	char *concatArgs;
-	int i, l, a, b = 0, charLen = 0;
+	int i = 0, x = 0, y = 0, len = 0;
 
 	/* check ac & av for NULL */
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	for (i = 0; i != *av[0]; i++)
+	while (i < ac)
 	{
-		for (l = 0; l != '\0'; l++)
-			charLen++;
-		charLen += charLen;
+		while (av[i][x])
+		{
+			len++;
+			x++;
+		}
+		len++;
+		i++;
 	}
-	concatArgs = malloc(sizeof(char) * charLen);
+	concatArgs = malloc((sizeof(char) * len) + 1);
 	if (concatArgs == NULL)
 		return (NULL);
-	for (a = 0; a < ac; a++)
+	while (i < ac)
 	{
-		concatArgs[b] = *av[a] + '\n';
-		b++;
+		while (av[i][x])
+		{
+			concatArgs[y] = av[i][x];
+			x++;
+			y++;
+		}
+		concatArgs[y] = '\n';
+		y++;
+		i++;
 	}
+	concatArgs[y] = '\0';
 
 	return (concatArgs);
 }
