@@ -10,13 +10,15 @@
 char *argstostr(int ac, char **av)
 {
 	char *concatArgs;
-	int i = 0, x = 0, y = 0, len = 0;
+	int i, x, y = 0, len = 0;
 
 	/* check ac & av for NULL */
 	if (ac == 0 || av == NULL)
 		return (NULL);
+	i = 0;
 	while (i < ac)
 	{
+		x = 0;
 		while (av[i][x])
 		{
 			len++;
@@ -28,8 +30,10 @@ char *argstostr(int ac, char **av)
 	concatArgs = malloc((sizeof(char) * len) + 1);
 	if (concatArgs == NULL)
 		return (NULL);
+	i = 0;
 	while (i < ac)
 	{
+		x = 0;
 		while (av[i][x])
 		{
 			concatArgs[y] = av[i][x];
