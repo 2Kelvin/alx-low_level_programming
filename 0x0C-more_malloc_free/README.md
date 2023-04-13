@@ -1,1 +1,1 @@
-ALX more `malloc`, `calloc\', `realloc` and `free` projects
+ALX more `malloc`, `calloc`, `realloc` and `free` projects

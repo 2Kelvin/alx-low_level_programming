@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 				j++;
 			}
 		}
-		else
+		else if (n < s2Len)
 		{
 			totalLen = s1Len + n;
 			while (i < totalLen)
