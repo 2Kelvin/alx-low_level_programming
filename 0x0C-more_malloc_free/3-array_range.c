@@ -10,11 +10,12 @@
 int *array_range(int min, int max)
 {
 	int *minMAxArr;
-	int n = 0, i = min;
+	int i = 0;
+	int arrLen = max - min;
 
 	/* allocating memory for the array */
 	/* +1 is for '\0' */
-	minMaxArr = malloc(sizeof(int) * (max + 1));
+	minMaxArr = malloc(sizeof(int) * (arrLen + 1));
 	/* checking if malloc was successful */
 	if (minMaxArr == NULL)
 		return (NULL);
@@ -22,10 +23,10 @@ int *array_range(int min, int max)
 	if (min < max)
 	{
 		/* insert values into the array */
-		while (i <= max)
+		while (min <= max)
 		{
-			minMaxArr[n] = i;
-			n++;
+			minMaxArr[i] = min;
+			min++;
 			i++;
 		}
 	}
