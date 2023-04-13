@@ -17,41 +17,34 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2 && s2[s2Len] != '\0')
 		s2Len++;
 	if (n >= s2Len)
-		totalLen = s1Len + s2Len;
+		concatStr = malloc(sizeof(char) * (s1Len + s2Len + 1));
 	else
-		totalLen = s1Len + n;
-	concatStr = (char *) malloc(sizeof(char) * (totalLen + 1));
+		concatStr = malloc(sizeof(char) * (s1Len + n + 1);
 	if (concatStr == NULL)
 		return (NULL);
-	if (s1)
+	while (i < s1Len)
 	{
-		while (i < s1Len)
+		concatStr[i] = s1[i];
+		i++;
+	}
+	if (n >= s2Len)
+	{
+		totalLen = s1Len + s2Len;
+		while (i < totalLen)
 		{
-			concatStr[i] = s1[i];
+			concatStr[i] = s2[j];
 			i++;
+			j++;
 		}
 	}
-	if (s2)
+	else if (n < s2Len)
 	{
-		if (n >= s2Len)
+		totalLen = s1Len + n;
+		while (i < totalLen)
 		{
-			totalLen = s1Len + s2Len;
-			while (i < totalLen)
-			{
-				concatStr[i] = s2[j];
-				i++;
-				j++;
-			}
-		}
-		else if (n < s2Len)
-		{
-			totalLen = s1Len + n;
-			while (i < totalLen)
-			{
-				concatStr[i] = s2[j];
-				i++;
-				j++;
-			}
+			concatStr[i] = s2[j];
+			i++;
+			j++;
 		}
 	}
 	concatStr[totalLen] = '\0';
