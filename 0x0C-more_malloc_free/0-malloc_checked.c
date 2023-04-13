@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -9,7 +10,7 @@
 void *malloc_checked(unsigned int b)
 {
 	/* a malloc address is void till initialized with another data-type */
-	void malAddress;
+	void *malAddress;
 
 	/* the memory space has already been calculated & stored in b */
 	malAddress = malloc(b);
