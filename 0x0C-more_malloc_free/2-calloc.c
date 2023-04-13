@@ -5,6 +5,7 @@
   * @s: pointer
   * @b: character to fill in (0)
   * @n: how many times
+  * Return: pointer
   */
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -23,7 +24,7 @@ char *_memset(char *s, char b, unsigned int n)
   * Return: nArr
   */
 
-void *_calloc (unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *nArr;
 
