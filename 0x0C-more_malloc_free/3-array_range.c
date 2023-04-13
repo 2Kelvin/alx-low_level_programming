@@ -11,27 +11,23 @@ int *array_range(int min, int max)
 {
 	int *minMaxArr;
 	int i = 0;
-	int arrLen = max - min;
+	int arrLen = max - min + 1;
 
+	/* checking min is greater than max */
+	if (min > max)
+		return (NULL);
 	/* allocating memory for the array */
-	/* +1 is for '\0' */
-	minMaxArr = malloc(sizeof(int) * (arrLen + 1));
+	minMaxArr = malloc(sizeof(int) * arrLen);
 	/* checking if malloc was successful */
 	if (minMaxArr == NULL)
 		return (NULL);
-	/* if min int is smaller than max int */
-	if (min < max)
+	/* insert values into the array */
+	while (min <= max)
 	{
-		/* insert values into the array */
-		while (min <= max)
-		{
-			minMaxArr[i] = min;
-			min++;
-			i++;
-		}
+		minMaxArr[i] = min;
+		min++;
+		i++;
 	}
-	else
-		/* return NULL if min > max */
-		return (NULL);
+	
 	return (minMaxArr);
 }
