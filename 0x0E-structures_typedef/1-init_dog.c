@@ -13,7 +13,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	/* assign memory first if there is none */
 	/* then assign properties */
-	if (d == NUll)
+	if (d == NULL)
 		d = malloc(sizeof(struct dog));
 	d->name = name;
 	d->age = age;
