@@ -11,14 +11,11 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	/* if d already has memory allocated assign properties */
-	if (d != NUll)
-	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
-	}
-	/* if no memory for d, allocate one first */
-	else
+	/* assign memory first if there is none */
+	/* then assign properties */
+	if (d == NUll)
 		d = malloc(sizeof(struct dog));
+	d->name = name;
+	d->age = age;
+	d->owner = owner;		
 }
