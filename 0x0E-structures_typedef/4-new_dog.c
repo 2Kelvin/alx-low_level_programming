@@ -49,8 +49,9 @@ dog_t *new_dog(char *name, float age, chat *owner)
 {
 	int nameLen = _strlen(name);
 	int ownerLen = _strlen(owner);
-	dog_t *dogObj = malloc(sizeof(dog_t));
+	dog_t *dogObj;
 
+	dogObj = malloc(sizeof(dog_t));
 	/* checking if a new dog address was created successfully */
 	if (dogObj == NULL)
 		return (NULL);
@@ -65,7 +66,6 @@ dog_t *new_dog(char *name, float age, chat *owner)
 	if (dogObj->owner == NULL)
 	{
 		free(dogObj);
-		free(dogObj->name);
 		return (NULL);
 	}
 	_strcpy(dogObj->name, name);
