@@ -45,7 +45,7 @@ int _strlen(char *s)
   * Return: new dog
   */
 
-dog_t *new_dog(char *name, float age, chat *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	int nameLen = _strlen(name);
 	int ownerLen = _strlen(owner);
