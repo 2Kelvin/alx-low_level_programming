@@ -13,9 +13,10 @@ void print_dog(struct dog *d)
 	if (d == NULL)
 		return;
 	/* if any object properties is NULL print (nil) */
-	if (d->name == NULL || d->owner == NULL)
-		printf("(nil)");
+	if (d->name == NULL)
+		d->name = "(nil)";
+	if (d->owner == NULL)
+		d->owner = "(nil)";
 	/* if everything is ok, print all the props */
-	else
-		printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
+	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
 }
