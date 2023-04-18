@@ -47,7 +47,7 @@ int _strlen(char *s)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t dogObj;
+	dog_t *dogObj;
 	int nameLen = 0, ownerLen = 0;
 
 	/* if name & owner args are not empty */
