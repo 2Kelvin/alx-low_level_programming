@@ -47,30 +47,39 @@ int _strlen(char *s)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int nameLen = _strlen(name);
-	int ownerLen = _strlen(owner);
-	dog_t *dogObj;
+	dog_t dogObj;
+	int nameLen = 0, ownerLen = 0;
 
-	dogObj = malloc(sizeof(dog_t));
-	/* checking if a new dog address was created successfully */
-	if (dogObj == NULL)
-		return (NULL);
-	/* creating memory for the new dog properties */
-	dogObj->name = malloc(sizeof(char) * (nameLen + 1));
-	if (dogObj->name == NULL)
+	/* if name & owner args are not empty */
+	/* malloc .name & .owner and copy respective args into them */
+	if (name !=  NULL && owner != NULL)
 	{
-		free(dogObj);
-		return (NULL);
+		nameLen = _strlen(name) + 1;
+		ownerLen = _strlen(owner) + 1;
+		dogObj = malloc(sizeof(dog_t));
+
+		if (dogObj == NULL)
+			return (NULL);
+
+		dogObj->name = malloc(sizeof(char) * nameLen);
+		if (dogObj->name == NULL)
+		{
+			free(dogObj);
+			return (NULL);
+		}
+
+		dogObj->owner = malloc(sizeof(char) * ownerLen);
+		if (dog->owner == NULL)
+		{
+			free(dogObj->name);
+			free(dogObj);
+			return (NULL);
+		}
+
+		dogObj->name = _strcpy(dogObj->name, name);
+		dogObj->owner = _strcpy(dogObj->owner, owner);
+		dogObj->age = age;
 	}
-	dogObj->owner = malloc(sizeof(char) * (ownerLen + 1));
-	if (dogObj->owner == NULL)
-	{
-		free(dogObj);
-		return (NULL);
-	}
-	_strcpy(dogObj->name, name);
-	_strcpy(dogObj->owner, owner);
-	dogObj->age = age;
 
 	return (dogObj);
 }
