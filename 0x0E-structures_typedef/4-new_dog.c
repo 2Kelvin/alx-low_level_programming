@@ -48,7 +48,7 @@ int _strlen(char *s)
 dog_t *new_dog(char *name, float age, chat *owner)
 {
 	int nameLen = _strlen(name);
-	int ownerLen = _strlen(owner)i;
+	int ownerLen = _strlen(owner);
 	dog_t *dogObj = malloc(sizeof(dog_t));
 
 	/* checking if a new dog address was created successfully */
