@@ -10,9 +10,9 @@
 void print_name(char *name, void (*f)(char *))
 {
 	/* checking if a name & function pointer have been passed in */
-	if (f != NULL || name != NULL)
-		/* use the function pointer passed in to print any passsed in name */
-		f(name);
-	else
+	if (name == NULL || f == NULL)
 		return;
+
+	/* use the function pointer passed in to print any passsed in name */
+	f(name);
 }
