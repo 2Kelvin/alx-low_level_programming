@@ -13,13 +13,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	/* of type same as that of size_t */
 	unsigned int i;
 
-	/* checking if array & action args have been passed in */
-	if (array && action)
+	/* making sure args have been passed in & are not NULL */
+	if (size > 0 && array != NULL && action != NULL)
 	{
 		/* accessing each array element & passing it to action function */
 		for (i = 0; i < size; i++)
 			action(array[i]);
 	}
-	else
-		return;
 }

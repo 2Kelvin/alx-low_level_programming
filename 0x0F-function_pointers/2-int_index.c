@@ -12,17 +12,20 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	/* checking if an array & function pointer */
-	/* have been passed in */
-	if (cmp && array)
+	/* if array is not 0 continue */
+	if (size > 0)
 	{
-		/* looping thro array searching for element */
-		for (i = 0; i < size; i++)
+		/* if function pointer & array are not null continue */
+		if (cmp != NULL && array != NULL)
 		{
-			if (cmp(array[i]) != 0)
-				return (i);
+			/* looping thro array searching for element */
+			for (i = 0; i < size; i++)
+			{
+				if (cmp(array[i]) != 0)
+					return (i);
+			}
 		}
 	}
-	/* if not passed in, return -1 */
+	/* otherwise, return -1 for no match */
 	return (-1);
 }
