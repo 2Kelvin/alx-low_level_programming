@@ -7,7 +7,7 @@
   * Return: 0 (for success)
   */
 
-int main(argc, argv[])
+int main(int argc, char *argv[])
 {
 	/* argument at index 1 in argv is the first number */
 	int num1 = atoi(argv[1]);
