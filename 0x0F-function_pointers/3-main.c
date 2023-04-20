@@ -9,20 +9,20 @@
 
 int main(int argc, char *argv[])
 {
-	/* argument at index 1 in argv is the first number */
-	int num1 = atoi(argv[1]);
-	/* argument at index 3 in argv is the second number */
-	int num2 = atoi(argv[3]);
 	int (*selFun)(int, int);
 	char x;
-	int answer;
+	int num1, num2, answer;
 
 	/* checking if enough arguments passed in */
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
-	}
+	}	
+	/* argument at index 1 in argv is the first number */
+	num1 = atoi(argv[1]);
+	/* argument at index 3 in argv is the second number */
+	num2 = atoi(argv[3]);
 	/* get the appropriate function using the operator argument */
 	/* passed at index 2 of argv */
 	selFun = get_op_func(argv[2]);
