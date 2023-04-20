@@ -8,7 +8,7 @@
 
 void print_all(const char * const format, ...)
 {
-	char *s = "";
+	char *s;
 	char *sptor = "";
 	int x = 0;
 	va_list list;
