@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	/* passed at index 2 of argv */
 	selFun = get_op_func(argv[2]);
 	/* if operator returns NULL/ no function print error & exit */
-	if (selFun == NULL)
+	if (!selFun)
 	{
 		printf("Error\n");
 		exit(99);
