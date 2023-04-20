@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(98);
-	}	
+	}
 	/* argument at index 1 in argv is the first number */
 	num1 = atoi(argv[1]);
 	/* argument at index 3 in argv is the second number */
