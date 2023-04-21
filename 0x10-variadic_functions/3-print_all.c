@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 
 	if (format != NULL)
 	{
-		while (format[x] != NULL)
+		while (format[x] != 0)
 		{
 			/* using switch statement to give each format type its respective format */
 			switch (format[x])
