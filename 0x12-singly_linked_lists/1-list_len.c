@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
   * list_len - returns no of elements in linked list list_t
@@ -8,7 +10,7 @@
 
 size_t list_len(const list_t *h)
 {
-	size_t noOfNodes;
+	size_t noOfNodes = 0;
 
 	while (h != NULL)
 	{
