@@ -8,7 +8,7 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t noOfNodes;
+	size_t noOfNodes = 0;
 
 	/* while list is not empty */
 	while (h != NULL)
