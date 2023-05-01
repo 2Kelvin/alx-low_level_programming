@@ -1,5 +1,5 @@
 #include "lists.h"
-i#include <stdio.h>
+#include <stdio.h>
 
 /**
   * add_nodeint - add node at the head of a linked list
