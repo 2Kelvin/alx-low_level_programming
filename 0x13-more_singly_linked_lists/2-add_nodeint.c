@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
+i#include <stdio.h>
 
 /**
   * add_nodeint - add node at the head of a linked list
@@ -24,6 +24,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	/* reassigning head pointer to carry the address of the new head node */
 	*head = newHeadNode;
 
-	return (*head);
+	return (newHeadNode);
 	free(newHeadNode);
 }
