@@ -9,19 +9,17 @@
 
 listint_t *get_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int nodeCount = 0;
+	listint_t *copyHead = head;
+	unsigned int nodeidx = 0;
 
-	if (head != NULL)
+	while (copyHead != NULL && nodeidx < index)
 	{
-		while (head != NULL)
-		{
-			if (nodeCount == index)
-				return (head);
-
-			head = head->next;
-			nodeCount++;
-		}
+		copyHead = copyHead->next;
+		nodeidx++;
 	}
 
-	return (NULL);
+	if (copyHead != NULL)
+		return (copyHead);
+	else
+		return (NULL);
 }
