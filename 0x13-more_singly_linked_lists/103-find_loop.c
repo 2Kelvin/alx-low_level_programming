@@ -14,15 +14,27 @@ listint_t *find_listint_loop(listint_t *head)
 	listint_t *frPtr = head;
 	listint_t *baPtr = head;
 
-	while (frPtr != NULL && frPtr->next != NULL)
+	if (head == NULL)
+		return (NULL);
+
+	while (frPtr != NULL && baPtr != NULL && baPtr->next)
 	{
-		baPtr = head->next;
-		frPtr = frPtr->next->next;
+		baPtr = baPtr->next->next;
+		frPtr = frPtr->next;
+
 		if (baPtr == frPtr)
 		{
-			head = frPtr->next;
-			break;
+			frPtr = head;
+
+			while (frPtr != baPtr)
+			{
+				frPtr = frPtr->next;
+				baPtr = baPtr->next;
+			}
+
+			return (baPtr);
 		}
 	}
-	return (frPtr);
+
+	return (NULL);
 }
