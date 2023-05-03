@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
   * delete_nodeint_at_index - deletes the node at the index passed in
