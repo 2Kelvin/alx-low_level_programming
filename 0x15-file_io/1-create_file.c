@@ -1,13 +1,7 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 
 /**
-  * create_file - fun that creates a file
+  * create_file: fun that creates a file
   * @filename: file to create
   * @text_content: filename content
   * Return: 1 (success) and -1 (failure)
