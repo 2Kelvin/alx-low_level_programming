@@ -1,10 +1,11 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
   * create_file - fun that creates a file
   * @filename: file to create
-  * text_content: filename content
+  * @text_content: filename content
   * Return: 1 (success) and -1 (failure)
   */
 
