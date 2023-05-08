@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 		}
 		rd = read(fm, bf, 1024);
 		fn = open(argv[2], O_WRONLY | O_APPEND);
-	} while (r > 0);
+	} while (rd > 0);
 
 	free(bf);
 	closing(fm);
