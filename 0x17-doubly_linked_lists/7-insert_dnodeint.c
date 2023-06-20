@@ -51,12 +51,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (idx == 0)
 		{
-			newNode = add_dnodeint(&currentNode, n);
+			newNode = add_dnodeint(h, n);
 			break;
 		}
 		else if (idx == (dlen - 1))
 		{
-			newNode = add_dnodeint_end(&currentNode, n);
+			newNode = add_dnodeint_end(h, n);
 			break;
 		}
 		else if (idx == nodeIdx)
