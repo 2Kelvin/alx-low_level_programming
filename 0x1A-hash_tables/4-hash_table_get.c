@@ -17,17 +17,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	if (index >= ht->size)
-		return (NULL);
 	for (i = 0; i < ht->size; i++)
 	{
-		if (index == i)
-		{
-			if (ht->array[i] != NULL)
-				return (ht->array[i]->value);
-			else
-				return (NULL);
-		}
+		if (i == index)
+			return (ht->array[i]->value);
 	}
 
 	return (NULL);
