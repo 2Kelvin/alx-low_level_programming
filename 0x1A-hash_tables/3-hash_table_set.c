@@ -22,28 +22,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL)
 		return (0);
 
-	if (ht->array[i] == NULL)
+	for (n = i; ht->array[n]; n++)
 	{
-		nodePair = malloc(sizeof(hash_node_t));
-		if (nodePair == NULL)
-			return (0);
-		nodePair->key = (char *)key;
-		nodePair->value = (char *)value;
-		nodePair->next = ht->array[i];
-		ht->array[i] = nodePair;
-	}
-	else
-	{
-		for (n = i; ht->array[n]; n++)
+		if (strcmp(ht->array[n]->key, key) == 0)
 		{
-			if (strcmp(ht->array[n]->key, key) == 0)
-			{
-				free(ht->array[n]->value);
-				ht->array[n]->value = strdup(value);
-				return (1);
-			}
+			free(ht->array[n]->value);
+			ht->array[n]->value = strdup(value);
+			return (1);
 		}
 	}
+
+	nodePair = malloc(sizeof(hash_node_t));
+	if (nodePair == NULL)
+		return (0);
+	nodePair->key = (char *)key;
+	nodePair->value = (char *)value;
+	nodePair->next = ht->array[i];
+	ht->array[i] = nodePair;
 
 	return (1);
 }
