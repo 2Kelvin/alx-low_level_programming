@@ -19,8 +19,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	index = key_index((const unsigned char *)key, ht->size);
 	for (i = 0; i < ht->size; i++)
 	{
-		if (i == index)
-			return (ht->array[i]->value);
+		if (index == i)
+		{
+			if (ht->array[i] != NULL)
+				return (ht->array[i]->value);
+			else
+				return (NULL);
+		}
 	}
 
 	return (NULL);
