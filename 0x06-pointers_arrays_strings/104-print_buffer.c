@@ -17,7 +17,7 @@ void print_buffer(char *b, int size)
 		size = sizeof(b[i]);
 		if (size > 0)
 		{
-			printf("%x",size);
+			printf("%x", size);
 		}
 		else
 			printf("\n");

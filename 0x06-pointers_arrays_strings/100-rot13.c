@@ -8,5 +8,9 @@
 
 char *rot13(char *s)
 {
+	int g, h;
+	char *r = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *w = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
 	return (s);
 }
