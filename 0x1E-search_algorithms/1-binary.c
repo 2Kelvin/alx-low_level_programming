@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-int binary_search(int *array, size_t size, int value);
-int bSearch(int *array, size_t start, size_t end, int value);
-void arrayPrint(int *array, size_t start, size_t end);
-
 /**
   * binary_search - using binary search algorithm
   * @array: array to search through
@@ -13,50 +9,24 @@ void arrayPrint(int *array, size_t start, size_t end);
   */
 int binary_search(int *array, size_t size, int value)
 {
-	return (bSearch(array, 0, size - 1, value));
-}
+	int l, r, half, i;
 
-/**
-  * bSearch - actual binary search & array splitting
-  * @array: array
-  * @start: array left
-  * @end: array right
-  * @value: value
-  * Return: index or -1
-  */
-int bSearch(int *array, size_t start, size_t end, int value)
-{
-	int half;
-
-	if (!array || start > end)
+	if (!array)
 		return (-1);
-	arrayPrint(array, start, end);
-	half = start + (end - 1) / 2;
-	if (start == end)
-		return (*(array + half) == value ? (int)half : -1);
-	if (array[half] == value)
-		return (half);
-	else if (array[half] > value)
-		return (bSearch(array, start, half - 1, value));
-	else
-		return (bSearch(array, half + 1, end, value));
-}
-
-/**
-  * arrayPrint - print the current array
-  * @array: array
-  * @start: array right
-  * @end: array end
-  * Return: void
-  */
-void arrayPrint(int *array, size_t start, size_t end)
-{
-	size_t x;
-
-	if (array)
+	l = 0;
+	r = size - 1;
+	while (l <= r)
 	{
+		half = (l + r) / 2;
 		printf("Searching in array: ");
-		for (x = start; x < start + (end - start + 1); x++)
-			printf("%d%s", *(array + x), x < start + (end - start) ? ", " : "\n");
+		for (i = l; i <= r; i++)
+			printf("%i%s", array[i], i == r ? "\n" : ", ");
+		if (array[half] < value)
+			l = half + 1;
+		else if (array[half] > value)
+			r = half - 1;
+		else
+			return (half);
 	}
+	return (-1);
 }
